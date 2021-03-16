@@ -1,18 +1,18 @@
 # bosch-hold
 Holding repo for Boasch prep work
 
-## Dreictory structure
+## Directory structure
 
--- root
----- .github
----- docs
----- engineering
------- go
------- rust
----- src
------- go
------- rust
----- tests
------- go
------- rust
+-- root<br/>
+---- .github<br/>
+---- docs<br/>
+---- engineering<br/>
+------ go<br/>
+------ rust<br/>
+---- src<br/>
+------ go<br/>
+------ rust<br/>
+---- tests<br/>
+------ go<br/>
+------ rust<br/>
 
