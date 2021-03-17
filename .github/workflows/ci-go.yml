@@ -12,6 +12,8 @@ on:
     paths:
       - '**.go'
 
+env:
+  working_directory: src/go/helloworld
 jobs:
   Check:
     name: Lint 
@@ -22,6 +24,8 @@ jobs:
       uses: actions/checkout@v2
     - name: golangci-lint
       uses: golangci/golangci-lint-action@v2
+      with:
+        working-directory: $working_directory
 
   build:
     name: Test and Build 
@@ -32,5 +36,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Run tests
       run: go test
+      working-directory: $working_directory
     - name: Build
       run: go build 
+      working-directory: $working_directory
