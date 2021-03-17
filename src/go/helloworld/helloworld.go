@@ -9,7 +9,6 @@ func sayHello(userName string) string {
 	output := "Hello "
 	output += userName
 	return output
-	// fmt.Printf("Hello %s\n", userName)
 }
 
 func main() {
