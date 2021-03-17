@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: cargo fmt
-      run: cargo fmt -- --check --color ${{ env.CARGO_TERM_COLOR }}
+      run: cargo fmt -- --check
     - name: cargo clippy
       run: cargo clippy -- -W warnings
 

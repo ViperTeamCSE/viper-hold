@@ -3,7 +3,7 @@ use std::env;
 fn main() {
     let mut s = String::new();
     let hello = say_hello(&mut s);
-    println!("{}",hello);
+    println!("{}", hello);
     let label = "Curent Directory";
     let dir = env::current_dir().unwrap();
     println!("{} {}", label, dir.display());
@@ -24,5 +24,4 @@ mod tests {
         let mut s = String::new();
         assert_eq!(say_hello(&mut s), "Hello, world!!");
     }
-
 }
