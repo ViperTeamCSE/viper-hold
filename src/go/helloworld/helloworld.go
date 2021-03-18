@@ -11,7 +11,7 @@ func sayHello(userName string) string {
 	return output
 }
 
-func main() {
+func getCurrentUser() string {
 	var userObject *user.User
 	var err error
 
@@ -20,6 +20,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	hello := sayHello(userObject.Username)
+	return userObject.Username
+}
+
+func main() {
+	userName := getCurrentUser()
+	hello := sayHello(userName)
 	fmt.Print(hello)
 }
