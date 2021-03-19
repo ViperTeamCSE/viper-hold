@@ -1,6 +1,6 @@
 # Rust developer notes for VS Code
 
-This document is a collection of notes used in getting developers on Windows and OSX up and running on Rust with VS Code
+This document is a collection of notes used in getting developers on Windows and OS X up and running on Rust with VS Code. **PLEASE NOTE: If you are on OS X, you will need to install both [XCode](https://developer.apple.com/xcode/) and the XCode [command line tools](https://developer.apple.com/download/more/?=xcode)**
 
 ## Getting started
 
