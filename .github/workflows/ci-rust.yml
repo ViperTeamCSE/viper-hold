@@ -1,0 +1,30 @@
+name: bosch-hold-rust
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: cargo fmt
+      run: cargo fmt -- --check
+    - name: cargo clippy
+      run: cargo clippy -- -W warnings
+
+
+  build:
+    name: Build 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cargo build
+    - name: Build examples
+      run: cargo build --examples
+    - name: Run Tests
+      run: cargo test --all-targets
+   
