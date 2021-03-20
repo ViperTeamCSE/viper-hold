@@ -78,9 +78,9 @@ A number of steps and guidance have been taken from [here](http://thiago.rocks/v
             "type": "lldb",
             "request": "launch",
             "name": "Debug Hello World",
-            "program": "${workspaceFolder}/src/rust/hello-world/target/debug/hello-world",
+            "program": "${workspaceFolder}/target/debug/hello-world",
             "windows": {
-                "program": "${workspaceFolder}/src/rust/hello-world/target/debug/hello-world.exe"
+                "program": "${workspaceFolder}/target/debug/hello-world.exe"
             },
             "args": [],
             "cwd": "${workspaceFolder}",
