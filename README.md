@@ -1,5 +1,5 @@
-# bosch-hold
-Holding repo for Boasch prep work
+# Viper Github working area
+Holding repo for CSE Viper team work on Github
 
 ## Directory structure
 
