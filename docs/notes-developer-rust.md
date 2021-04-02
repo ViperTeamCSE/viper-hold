@@ -1,6 +1,6 @@
 # Rust developer notes for VS Code
 
-This document is a collection of notes used in getting developers on Windows and OSX up and running on Rust with VS Code
+This document is a collection of notes used in getting developers on Windows and OS X up and running on Rust with VS Code. **PLEASE NOTE: If you are on OS X, you will need to install both [XCode](https://developer.apple.com/xcode/) and the XCode [command line tools](https://developer.apple.com/download/more/?=xcode)**
 
 ## Getting started
 
@@ -23,6 +23,45 @@ fn main() {
 }
 ```
 
+## Building, Testing, and Linting
+
+Use of tasks in VS Code can accomplish building, testing, and linting. While you are free to use your own, an example tasks.json file is located below:
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Cargo Build Full",
+            "type": "shell",
+            "command": "cargo build",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        },
+        {
+            "label": "Run Cargo Tests Full",
+            "type": "shell",
+            "command": "cargo test",
+            "presentation": {
+            "reveal": "always",
+            "panel": "new"
+            },
+        },
+        {
+            "label": "Run Cargo Format Full",
+            "type": "shell",
+            "command": "cargo fmt",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+            }
+        }
+    ]
+  }
+  ```
+
 ## Running and Debugging
 
 A number of steps and guidance have been taken from [here](http://thiago.rocks/view/20200512_vscode_with_rust).
@@ -38,10 +77,10 @@ A number of steps and guidance have been taken from [here](http://thiago.rocks/v
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
-            "program": "${workspaceFolder}/src/rust/hello-world/target/debug/hello-world",
+            "name": "Debug Hello World",
+            "program": "${workspaceFolder}/target/debug/hello-world",
             "windows": {
-                "program": "${workspaceFolder}/src/rust/hello-world/target/debug/hello-world.exe"
+                "program": "${workspaceFolder}/target/debug/hello-world.exe"
             },
             "args": [],
             "cwd": "${workspaceFolder}",
