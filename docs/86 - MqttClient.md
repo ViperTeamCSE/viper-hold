@@ -25,9 +25,5 @@ The differences between 3.1 and 3.1.1 are documented [here](https://github.com/m
 
 # Recommendations 
 
-If MQTT 5 support is a requirement, then only 3 on the list qualify. The Eclipse Paho library is as close to an "official" Rust MQTT library as the community has, but given that it is simply a wrapper around the underlying Paho C library, the tradeoff against the safety and build simplicity of a pure Rust crate needs to be considered. Rumqtt and ntex-mqtt are both native Rust libraries that claim support for MQTT 3.1.1 and 5 making them worth examining further. 
-
-If MQTT 5 is not a requirement, then I would recommending looking at both mqtt-rs and mqttrs. The former is one of the oldest Rust Mqtt libraries and still sees regular activity. The latter is one of the newer libraries and features a very small dependency list, potentially making it one of the lightest options.
-
-RustMQ is a library with a solid history and relatively recent activity, but given that it does not clearly state the MQTT version it supports, I would prioritize this last on the list.
+Given the lack of clear definition of requirements other than IoT Hub connectivity, my recommendation is that we look at the following 3 libraries: Eclipse Paho, Rumqtt and MQTT-rs.  The Eclipse Paho library is as close to an "official" Rust MQTT library as the community has, but given that it is simply a wrapper around the underlying Paho C library, the tradeoff against the safety and build simplicity of a pure Rust crate needs to be considered. Rumqtt and MQTT-rs are both native Rust libraries that have been around for a number of years and still see recent updates. One other factor is that these three libraries give us one of each license type, should concerns arise around a specific license.
 
