@@ -15,6 +15,9 @@ namespace HelloWorld
                 var current = DateTime.Now;
                 // Write used to stay on same line
                 Console.Write(current.ToLongTimeString());
+                var badmath = new BadMath();
+                var x = 5;
+                var xfact = badmath.factorial(5);
 
                 Thread.Sleep(1000);
             }
